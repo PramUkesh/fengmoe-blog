@@ -112,7 +112,7 @@ a img {
 }
 body {
   background: #ddd;
-  font-family: "WenQuanYi Micro Hei", "Helvetica Neue", "Helvetica", "Microsoft YaHei", Arial, sans-serif;
+  font-family: "Source Han Sans CN", "WenQuanYi Micro Hei", "Helvetica Neue", "Helvetica", "Microsoft YaHei", Arial, sans-serif;
   font-size: 100%;
   color: #817c7c;
   line-height: 1.5;
@@ -427,19 +427,19 @@ body >header a {
 #textlogo h1.site-name {
   width: 86%;
   font-family: "covered_by_your_graceregular";
-  font-size: 200%;
+  font-size: 150%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 @media only screen and (min-width: 768px) {
   #textlogo h1.site-name {
-    font-size: 240%;
+    font-size: 170%;
   }
 }
 @media only screen and (min-width: 1024px) {
   #textlogo h1.site-name {
-    font-size: 280%;
+    font-size: 230%;
   }
 }
 #textlogo h2.blog-motto {
