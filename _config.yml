@@ -5,7 +5,7 @@
 # Site
 title: FengMoe Blog
 subtitle: 一个业余 Android 开发者的博客
-description:
+description: 一个业余 Android 开发者的博客
 author: Fung Jichun
 language: zh_CN
 timezone:
@@ -41,7 +41,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: true
 
 # Category & Tag
 default_category: uncategorized
