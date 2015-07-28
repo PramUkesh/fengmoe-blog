@@ -2,6 +2,7 @@
 menu:
   Home: /
   Archives: /archives
+  About: /about
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -63,7 +64,7 @@ author:
   twitter:    ## e.g. yangjiansky for https://twitter.com/yangjiansky
   github: fython
   facebook:   ## e.g. yangjian for https://favebook.com/yangjian
-  tsina:      ## e.g. 1664838973  Your weibo ID,It will be used in share button.
+  tsina: 1870051034
   linkedin:   ## e.g. in/jeffweiner08 for https://www.linkedin.com/in/jeffweiner08
 
 #### Comment
