@@ -1,0 +1,387 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android 5.0 网络图标感叹号解决方法 | FengMoe Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Fung Jichun">
+    
+    <meta name="description" content="文章转载自：ACG喵（http://www.acgmiao.com/）
+原文地址：http://acgmiao.com/posts/portal_detection/
+
+
+2014 年 10月，Google 发布了 Android 5.0 操作系统，新系统有着很多令人称赞的新功能，相信不少朋友会尝试">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="theme-color" content="#795548"></meta>
+    <meta name="msapplication-TileColor" content="#795548"/>
+    
+    <link rel="apple-touch-icon" href="/img/author.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/miyauchi_renge.png" alt="FengMoe Blog" title="FengMoe Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="FengMoe Blog">FengMoe Blog</a></h1>
+				<h2 class="blog-motto">一个业余 Android 开发者的博客</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">存档</a></li>
+					
+						<li><a href="/about">关于我</a></li>
+					
+						<li><a href="http://feng.moe">FengMoe 主站</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/30/How-to-remove-the-exclamation-beside-the-signal/" title="Android 5.0 网络图标感叹号解决方法" itemprop="url">Android 5.0 网络图标感叹号解决方法</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://plus.google.com/112136300531559960000?rel=author" title="Fung Jichun" target="_blank" itemprop="author">Fung Jichun</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-07-30T10:15:32.000Z" itemprop="datePublished">2015-07-30</time>
+    更新日期:<time datetime="2015-07-30T11:23:33.000Z" itemprop="dateModified">2015-07-30</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方法"><span class="toc-number">1.</span> <span class="toc-text">解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#其他服务器"><span class="toc-number">1.1.</span> <span class="toc-text">其他服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭建一个自己的检测服务器"><span class="toc-number">2.</span> <span class="toc-text">如何搭建一个自己的检测服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#根据国内开发者小狐狸的解释，该机制运行方式如下："><span class="toc-number">3.</span> <span class="toc-text">根据国内开发者小狐狸的解释，该机制运行方式如下：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#文章转载自_ACG喵：http://acgmiao-com/posts/portal_detection/"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">文章转载自 ACG喵：http://acgmiao.com/posts/portal_detection/</span></a></li></ol></li></ol></li></ol></li></ol>
+		</div>
+		
+		<blockquote>
+<p>文章转载自：ACG喵（<a href="http://www.acgmiao.com/）" target="_blank" rel="external">http://www.acgmiao.com/）</a></p>
+<p>原文地址：<a href="http://acgmiao.com/posts/portal_detection/" target="_blank" rel="external">http://acgmiao.com/posts/portal_detection/</a></p>
+</blockquote>
+<hr>
+<p>2014 年 10月，Google 发布了 Android 5.0 操作系统，新系统有着很多令人称赞的新功能，相信不少朋友会尝试去升级更新。</p>
+<table><br><tr><br><th><br><img src="http://acgmiao.com/wp-content/uploads/2015/07/portal_detection_pic5-576x1024.png" width="100%"><br></th><br><th><br><img src="http://acgmiao.com/wp-content/uploads/2015/07/portal_detection_pic4-576x1024.png" width="100%"><br></th><br></tr><br></table>
+
+
+<p>Google 在新系统中加入了网络的检测机制，在原生系统当中，它通过连接 Google 服务器来测试网络连通状况，如果无法联通，会在网络中提示受限，显示为网络图标右下角为小感叹号。</p>
+<p>这种设计的用意在于如果它发现 WiFi 网络受限或无连接，而且设备有移动网络可用，可以自动切换到2G/3G/LTE，让设备保持联网。</p>
+<p>不过由于你懂得原因，Google 服务器无法访问，这就会导致提示网络受限，而且因为不断地向网络发包，还会消耗流量和影响手机续航时间。</p>
+<h3 id="解决方法">解决方法</h3><p>先下载ADB调试工具，安装手机驱动，打开开发者选项中的“USB调试”开关。</p>
+<ol>
+<li><p>完全屏蔽网络检查功能，最简单快速，但是就没有办法提示 WiFi 登录</p>
+<p><code>adb shell &quot;settings put global captive_portal_detection_enabled 0&quot;</code></p>
+</li>
+<li><p>用国内的服务器替换掉 Google 的服务器：</p>
+<p><code>adb shell &quot;settings put global captive_portal_server portaldetection.sinaapp.com&quot;</code></p>
+</li>
+<li><p>（此方法需要Root权限）访问/data/data/com.android.providers.settings/databases/settings.db用sqlite编辑器打开，修改表globle内容。</p>
+</li>
+<li><p>（此方法需要Root权限）使用 Portal Server 修改器进行修改。<a href="http://www.noisyfox.cn/download/75/" target="_blank" rel="external">下载地址</a></p>
+</li>
+</ol>
+<table><br><tr><br><th><br><img src="http://acgmiao.com/wp-content/uploads/2015/07/portal_detection_pic6-576x1024.png" width="100%"><br></th><br><th><br><img src="http://acgmiao.com/wp-content/uploads/2015/07/portal_detection_pic3-576x1024.png" width="100%"><br></th><br></tr><br></table>
+
+<h4 id="其他服务器">其他服务器</h4><p>如果你对我提供的服务器速度不满意，你还可以尝试以下服务器地址：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xn--yet824cpd<span class="class">.xn--fiqs8s</span></span><br><span class="line">liukebin<span class="class">.sinaapp</span><span class="class">.com</span></span><br><span class="line">www<span class="class">.iwch</span><span class="class">.me</span></span><br><span class="line">www.<span class="number">265</span><span class="class">.com</span></span><br><span class="line">g<span class="class">.cn</span></span><br><span class="line">tools<span class="class">.lnter</span><span class="class">.tk</span></span><br><span class="line">clients3<span class="class">.x</span><span class="class">.gg</span></span><br><span class="line"><span class="number">5.0</span><span class="class">.appinn</span><span class="class">.com</span></span><br></pre></td></tr></table></figure>
+<p>以上网址网络收集得到，如果给提供者带来不便之处请回复告知，我会尽快删除。</p>
+<h3 id="如何搭建一个自己的检测服务器">如何搭建一个自己的检测服务器</h3><p>你看你就是一个爱折腾的人，也叫极(sha)客(zi)。</p>
+<ol>
+<li><p>Apache服务器，如果你的服务器安装了rewrite模块，那么只需要在网站的.htaccess中加入以下代码：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;IfModule mod_rewrite.c&gt;</span></span><br><span class="line">   <span class="keyword"><span class="common">RewriteEngine</span></span> <span class="literal">On</span></span><br><span class="line">   <span class="keyword"><span class="common">RewriteCond</span></span> <span class="cbracket">%&#123;REQUEST_URI&#125;</span> /generate_204$</span><br><span class="line">   <span class="keyword"><span class="common">RewriteRule</span></span> $ /<span class="sqbracket"> [R=204]</span></span><br><span class="line"><span class="tag">&lt;/IfModule&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>nginx服务器，在配置文件中填入以下代码：</p>
+<p><code>location /generate_204 { return 204; }</code></p>
+</li>
+<li><p>SAE平台，在config.yaml中添加以下代码：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">handle:</span></span><br><span class="line"> - <span class="string">rewrite:</span><span class="keyword">if</span> (%&#123;REQUEST_URI&#125; ~ <span class="string">"/generate_204$"</span>) goto <span class="string">"$/ [R=204]"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>强行空文件法</p>
+</li>
+</ol>
+<p>直接在网站的根目录下建立一个叫做 generate_204 的空文件即可，因为如果返回的内容为空那么也会当成 204 来处理。</p>
+<h3 id="根据国内开发者小狐狸的解释，该机制运行方式如下：">根据国内开发者<a href="https://www.noisyfox.cn/" target="_blank" rel="external">小狐狸</a>的解释，该机制运行方式如下：</h3><p><img src="http://acgmiao.com/wp-content/uploads/2015/04/portal_detection_pic1.png" alt=""></p>
+<p>简要来说就是，如果该网络是 VPN ，那么直接使用这个网络进行连接，否则调用 <strong>isCaptivePortal()</strong> 函数进行网络状况的判定，再根据判定结果决定是否选用此网络。 而罪魁祸首就是这个 <strong>isCaptivePortal()</strong> 函数，它会访问 <strong>clients3.google.com/generate_204</strong> 并根据返回结果来判断网络联通状况。</p>
+<p>想必大家都连接过那些需要验证才能使用的 WiFi 热点吧，当你们连接这些热点的时候，Android 会自动弹出提示询问你是否需要登录。而这个功能就是依靠了 <strong>isCaptivePortal()</strong> 这个函数才得以实现，具体原理如下：</p>
+<p><img src="http://acgmiao.com/wp-content/uploads/2015/04/portal_detection_pic2.png" alt=""></p>
+<p>如果当前 WiFi 是需要登录才可以连接，那么当试图访问 Google 的服务器的时候，WiFi 的验证机制一定会自动跳转到一个登录页面，这个时候 HTTP 请求的返回值就必然不是 204。就是通过这一机制，便可以区分是否需要验证。</p>
+<h6 id="文章转载自_ACG喵：http://acgmiao-com/posts/portal_detection/">文章转载自 <a href="http://acgmiao.com" target="_blank" rel="external">ACG喵</a>：<a href="http://acgmiao.com/posts/portal_detection/" target="_blank" rel="external">http://acgmiao.com/posts/portal_detection/</a></h6>  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android-5-0/">Android 5.0</a><a href="/tags/实用技巧/">实用技巧</a><a href="/tags/转载/">转载</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  
+<div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a class="jiathis_button_twitter">Twitter</a>
+    <a class="jiathis_button_evernote">EverNote</a>
+    <a href="http://www.jiathis.com/share?uid=1501277" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+     ralateuid:{"tsina":"1870051034"},hideMore:false}
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+2051245" charset="utf-8"></script>      
+
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/07/28/Why-I-became-a-developer/"  title="『杂谈』我的业余开发者之路">
+ <strong>NEXT:</strong><br/> 
+ <span>『杂谈』我的业余开发者之路
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方法"><span class="toc-number">1.</span> <span class="toc-text">解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#其他服务器"><span class="toc-number">1.1.</span> <span class="toc-text">其他服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭建一个自己的检测服务器"><span class="toc-number">2.</span> <span class="toc-text">如何搭建一个自己的检测服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#根据国内开发者小狐狸的解释，该机制运行方式如下："><span class="toc-number">3.</span> <span class="toc-text">根据国内开发者小狐狸的解释，该机制运行方式如下：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#文章转载自_ACG喵：http://acgmiao-com/posts/portal_detection/"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">文章转载自 ACG喵：http://acgmiao.com/posts/portal_detection/</span></a></li></ol></li></ol></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">標簽</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Android-5-0/" title="Android 5.0">Android 5.0<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/博客/" title="博客">博客<sup>1</sup></a></li>
+		
+			<li><a href="/tags/实用技巧/" title="实用技巧">实用技巧<sup>1</sup></a></li>
+		
+			<li><a href="/tags/日记/" title="日记">日记<sup>1</sup></a></li>
+		
+			<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+			<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情鏈接</p>
+    <ul>
+      <li><a href="https://typeblog.net/" target="_blank" title="Typeblog">雪碧虾的博客</a></li>
+      <li><a href="http://acgmiao.com" target="_blank" title="ACG 喵">LI欣欣Zn的博客</a></li>
+      <li><a href="http://undownding.me" target="_blank" title="不淡定的陆仁甲">但丁不淡定的博客</a></li>
+      <li><a href="http://drakeet.me/" target="_blank" title="Drakeet的个人博客">Drakeet的博客</a></li>
+      <li><a href="http://github.com/fython" target="_blank" title="我的 Github">烧饼的 Github 主页</a></li>
+    </ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/512332940" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/fython" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+		
+		<a href="http://yoursite.com" target="_blank" title="Fung Jichun">Fung Jichun</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"fengmoeblog"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
